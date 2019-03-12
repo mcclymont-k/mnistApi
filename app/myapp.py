@@ -6,6 +6,7 @@ from flask_cors import CORS
 from io import BytesIO
 
 import aiohttp, uvicorn
+print('Running locally')
 
 app = Flask(__name__)
 cors = CORS(app)

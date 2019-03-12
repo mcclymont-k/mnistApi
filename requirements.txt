@@ -2,3 +2,4 @@ aiohttp==3.5.4
 Flask_Cors==3.0.7
 Flask==1.0.2
 fastai==0.7.0
+gunicorn

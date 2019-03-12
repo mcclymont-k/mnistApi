@@ -1,3 +1,4 @@
+Python==3.6.4
 Flask==1.0.2
 aiohttp
 fastai==0.7.0

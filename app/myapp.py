@@ -5,7 +5,7 @@ from fastai.vision import *
 from flask_cors import CORS
 from io import BytesIO
 
-import aiohttp
+import aiohttp, uvicorn
 
 app = Flask(__name__)
 cors = CORS(app)

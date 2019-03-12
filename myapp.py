@@ -7,19 +7,19 @@ from io import BytesIO
 
 import aiohttp
 
-application = Flask(__name__)
-cors = CORS(application)
+app = Flask(__name__)
+cors = CORS(app)
 path = Path(__file__).parent
 
 # Load the learner from export.pkl
 learn = load_learner(f'{path}')
 
-@application.route('/test')
+@app.route('/test')
 def test():
     return jsonify({'data': 'great success'})
 
 # POST route for prediction
-@application.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['POST'])
 def predict():
     data = request.files['data'].read()
     img = open_image(BytesIO(data))
@@ -30,4 +30,4 @@ def predict():
     })
 
 if __name__ == '__main__':
-    application.run()
+    app.run()

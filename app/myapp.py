@@ -31,4 +31,4 @@ def predict():
     })
 
 if __name__ == '__main__':
-    if 'serve' in sys.argv: uvicorn.run(app=app, host='0.0.0.0', port=5042)
+    if 'serve' in sys.argv: app.run(host='0.0.0.0', port=5042)
